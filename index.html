@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer with Todo</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <!-- Add color picker -->
+    <div class="theme-picker">
+        <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="color-options" id="colorOptions">
+            <button class="color-option" data-color="#0ff" style="background: #0ff;"></button>
+            <button class="color-option" data-color="#ff0" style="background: #ff0;"></button>
+            <button class="color-option" data-color="#f0f" style="background: #f0f;"></button>
+            <button class="color-option" data-color="#0f0" style="background: #0f0;"></button>
+            <button class="color-option" data-color="#f50" style="background: #f50;"></button>
+        </div>
+    </div>
+
+    <!-- Add the background container before the main content -->
+    <div class="background-container">
+        <div class="code-rain"></div>
+    </div>
+
+
+    
+    <div class="container">
+        <!-- Input Section -->
+
+        <div class="input-section" id="inputSection">
+            <input type="text" id="eventTitle" placeholder="Enter Event Title" class="title-input">
+            <div class="datetime-container">
+                <div class="date-input-container">
+                    <input type="date" id="eventDate" class="date-input" placeholder="Select Date">
+                    <i class="fas fa-calendar-alt calendar-icon"></i>
+                </div>
+                <div class="time-input-container">
+                    <input type="time" id="eventTime" class="time-input" placeholder="Select Time">
+                    <i class="fas fa-clock clock-icon"></i>
+                </div>
+            </div>
+            <button id="startButton" class="start-btn">Start Countdown</button>
+
+        </div>
+
+        <!-- Countdown Section -->
+        <div class="countdown-section" id="countdownSection" style="display: none;">
+
+            <div class="header-container">
+                <button class="edit-btn" id="editTitleBtn">
+                    <i class="fas fa-edit"></i>
+                </button>
+                                <!-- Add quote container before the theme picker -->
+ 
+            </div>
+            <h1 id="titleDisplay"></h1>
+            
+            <div class="main-content">
+                <!-- Clock Section -->
+                <div class="clock-section">
+                    <!-- Analog Clock -->
+                    <div class="clock">
+                        <div class="outer-circle">
+                            <!-- Clock Numbers -->
+                            <div class="number n1">1</div>
+                            <div class="number n2">2</div>
+                            <div class="number n3">3</div>
+                            <div class="number n4">4</div>
+                            <div class="number n5">5</div>
+                            <div class="number n6">6</div>
+                            <div class="number n7">7</div>
+                            <div class="number n8">8</div>
+                            <div class="number n9">9</div>
+                            <div class="number n10">10</div>
+                            <div class="number n11">11</div>
+                            <div class="number n12">12</div>
+
+                            <!-- Clock Hands -->
+                            <div class="hands">
+                                <div class="hour-hand"></div>
+                                <div class="minute-hand"></div>
+                                <div class="second-hand"></div>
+                                <div class="center-point"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Countdown Display -->
+                    <div class="countdown-display">
+                        <div class="time-unit">
+                            <span id="days">00</span>
+                            <label>Days</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="hours">00</span>
+                            <label>Hours</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="minutes">00</span>
+                            <label>Minutes</label>
+                        </div>
+                        <div class="time-unit">
+                            <span id="seconds">00</span>
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Todo List Section -->
+                <div class="todo-section">
+                    <div class="todo-header">
+                        <h2>Tasks</h2>
+                        <span class="task-count">0 tasks remaining</span>
+                    </div>
+                    <div class="todo-input-container">
+                        <input type="text" id="todoInput" placeholder="Add a new task">
+                        <button id="addTodoBtn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <ul class="todo-list" id="todoList">
+                        <!-- Todo items will be added here -->
+                    </ul>
+                </div>
+                <div class="quote-container">
+                    <div class="quote-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p id="quote-text"></p>
+                        <p id="quote-author"></p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="resetButton" class="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
