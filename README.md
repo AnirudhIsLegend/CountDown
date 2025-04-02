@@ -1,6 +1,6 @@
 # Countdown Timer with Todo List
 
-![Countdown Timer Screenshot](screenshot.png)
+
 
 A feature-rich countdown application with an elegant interface that combines countdown functionality with a task management system.
 
